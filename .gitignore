@@ -1,0 +1,22 @@
+# Secrets
+*.key
+*.pem
+*.cert
+*.json
+*.ini
+*.conf
+*.env
+
+# Database files
+*.db
+*.sqlite
+*.mysql
+*.postgres
+
+# Other sensitive files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Editor backup files
+*~
