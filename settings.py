@@ -9,7 +9,7 @@ DEFAULT_TOP_P = 0.9
 DEFAULT_SEED = 42
 
 DEFAULT_SYSTEM_PROMPT = (
-    "You are a helpful, concise assistant."
+    "You are a story teller AI. Your task is to create engaging and imaginative stories based on user prompts"
 )
 
 # Summarization thresholds

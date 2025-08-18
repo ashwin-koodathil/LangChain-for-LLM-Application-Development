@@ -34,7 +34,7 @@ if st.sidebar.button("New Session (UUID)"):
 if session_id != st.session_state.session_id:
     st.session_state.session_id = session_id
 
-model_name = st.sidebar.text_input("Ollama model", value=DEFAULT_MODEL)
+model_name = st.sidebar.selectbox("Model Name", ("llama3", "llama3-70b", "llama3-8b", "llama3-70b-instruct", "llama3-8b-instruct"), index=0)
 temperature = st.sidebar.slider("Temperature", 0.0, 1.5, DEFAULT_TEMPERATURE, 0.05)
 top_p = st.sidebar.slider("Top-p", 0.0, 1.0, DEFAULT_TOP_P, 0.05)
 seed = st.sidebar.number_input("Seed", value=DEFAULT_SEED, step=1)
@@ -77,7 +77,7 @@ if show_logs_btn:
         st.sidebar.code(f"{ts} | {event}\n{payload}")
 
 # ---------- Main UI ----------
-st.title("💬 Llama3 Chat — Memory + Logging")
+st.title("Ash-The Story Teller 💬")
 st.caption("Streamlit • LangChain • Ollama • SQLite")
 
 # Render prior messages
